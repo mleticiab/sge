@@ -8,7 +8,8 @@ class SupplierForm(forms.ModelForm):
         model = models.Supplier
         fields = ['name', 'description']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control', 'rows': 3}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
         labels = {
             'name': 'Nome',
